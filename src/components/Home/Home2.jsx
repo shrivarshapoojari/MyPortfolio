@@ -1,7 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../assets/avatar.jpg";
+import myImg from "../../assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
+import '../../../src/style.css';
+import '../../../src/index.css';
+
 import {
   AiFillGithub,
   AiOutlineTwitter,
