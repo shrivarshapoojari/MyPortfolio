@@ -5,6 +5,7 @@ import Particle from "../Particle";
  
 import clearzone from "../../assets/Projects/clearzone.png";
 import rechat from "../../assets/Projects/rechat.png";
+import logify from "../../assets/Projects/logify.png";
 
  
 
@@ -24,6 +25,7 @@ function Projects() {
             <ProjectCard
               imgPath={clearzone}
               isBlog={false}
+              git={true}
               title="ClearZone AI"
               description= "ClearZoneAI is an AI-powered workplace safety management system that prevents accidents in factories through real-time monitoring and alerts. It detects PPE violations, falls, spills, forklift overspeeding, fire risks, and unsafe behaviors. The system features gesture-based emergency alerts and an evacuation management module for trapped employees. It was built using YOLO, OpenCV, MediaPipe, Flask, and React."
               ghLink="https://github.com/shrivarshapoojari/Clear-Zone-Ai"
@@ -35,54 +37,72 @@ function Projects() {
             <ProjectCard
               imgPath={rechat}
               isBlog={false}
+              git={true}
               title="Rechat"
-              description="ReChat is a real-time chat application built with the MERN stack and Socket.io, offering seamless messaging with WebSockets. It features OTP-based authentication, file sharing, friend requests, and group chats. Users can enjoy responsive search, typing indicators, and instant message alerts. The UI is built with React and MUI for an intuitive experience."
+              description="ReChat is a real-time chat application built with the MERN stack and Socket.io, offering seamless messaging with WebSockets. It features OTP-based authentication, file sharing, friend requests, and group chats. Users can enjoy responsive search, typing indicators, and instant message alerts. The UI was built with React and MUI for an intuitive experience."
               ghLink="https://github.com/shrivarshapoojari/ReChat"
               demoLink="https://rechaat.vercel.app/"
             />
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={rechat}
+              imgPath={logify}
               isBlog={false}
-              title="Rechat"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
+              git={false}
+              title="Logify"
+              description="Logify is a Unity-based 3D logic gate simulator built with C#, enabling students to explore digital electronics interactively. It supports basic, universal gates, and MSI components like multiplexers and decoders. The 3D environment provides learning resources, including descriptions and logic tables. This immersive tool enhances understanding through hands-on simulations."
               ghLink="https://github.com/shrivarshapoojari/ReChat"
-              demoLink="https://rechaat.vercel.app/"
+              demoLink="https://shrivarsha.itch.io/logify"
             />
           </Col>
+          
+
+
+
+
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={rechat}
+              imgPath={logify}
               isBlog={false}
-              title="Rechat"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
+              git={false}
+              title="Logify"
+              description="Logify is a Unity-based 3D logic gate simulator built with C#, enabling students to explore digital electronics interactively. It supports basic, universal gates, and MSI components like multiplexers and decoders. The 3D environment provides learning resources, including descriptions and logic tables. This immersive tool enhances understanding through hands-on simulations."
               ghLink="https://github.com/shrivarshapoojari/ReChat"
-              demoLink="https://rechaat.vercel.app/"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={rechat}
-              isBlog={false}
-              title="Rechat"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/shrivarshapoojari/ReChat"
-              demoLink="https://rechaat.vercel.app/"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={rechat}
-              isBlog={false}
-              title="Rechat"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/shrivarshapoojari/ReChat"
-              demoLink="https://rechaat.vercel.app/"
+              demoLink="https://shrivarsha.itch.io/logify"
             />
           </Col>
 
-        
+
+
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={logify}
+              isBlog={false}
+              git={false}
+              title="Logify"
+              description="Logify is a Unity-based 3D logic gate simulator built with C#, enabling students to explore digital electronics interactively. It supports basic, universal gates, and MSI components like multiplexers and decoders. The 3D environment provides learning resources, including descriptions and logic tables. This immersive tool enhances understanding through hands-on simulations."
+              ghLink="https://github.com/shrivarshapoojari/ReChat"
+              demoLink="https://shrivarsha.itch.io/logify"
+            />
+          </Col>
+
+
+
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={logify}
+              isBlog={false}
+              git={false}
+              title="Logify"
+              description="Logify is a Unity-based 3D logic gate simulator built with C#, enabling students to explore digital electronics interactively. It supports basic, universal gates, and MSI components like multiplexers and decoders. The 3D environment provides learning resources, including descriptions and logic tables. This immersive tool enhances understanding through hands-on simulations."
+              ghLink="https://github.com/shrivarshapoojari/ReChat"
+              demoLink="https://shrivarsha.itch.io/logify"
+            />
+          </Col>
 
          
         </Row>
