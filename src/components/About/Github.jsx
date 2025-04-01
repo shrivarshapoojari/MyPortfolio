@@ -138,7 +138,7 @@ const Github = () => {
           fill: #061e12;
         }
         .react-calendar-heatmap .color-scale-1 {
-          fill: #0e4429;
+          fill: #0b5a27.;
         }
        
         .react-calendar-heatmap .color-scale-2 {
