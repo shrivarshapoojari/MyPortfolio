@@ -11,7 +11,7 @@ const LeetCode = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/shrivarsha/calendar/")
+    fetch("https://alfa-leetcode-api.onrender.com/shrivarsha/calendar/")
       .then((res) => res.json())
       .then((json) => {
         const parsedData = JSON.parse(json.submissionCalendar);

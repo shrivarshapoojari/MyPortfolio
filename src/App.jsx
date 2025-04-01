@@ -9,6 +9,8 @@ import './style2.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from './components/Navbar'
 import About from './components/About/About'
+import Footer from './components/Footer'
+import Projects from './components/Projects/Projects'
  const App = () => {
    return (
       <BrowserRouter>
@@ -16,7 +18,9 @@ import About from './components/About/About'
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About />} />
+          <Route path="/project" element= {<Projects/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
    )
  }
