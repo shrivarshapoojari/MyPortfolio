@@ -1,0 +1,23 @@
+/* LeetCodeProgressCalendar.css */
+.react-calendar__tile.solved {
+    background-color: #4caf50;  /* Green for solved days */
+    color: white;
+  }
+  
+  .react-calendar__tile.solved:hover {
+    background-color: #388e3c;  /* Darker green when hovered */
+  }
+  
+  .react-calendar__tile {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .react-calendar__tile > span {
+    font-size: 12px;
+    color: white;
+    background-color: #388e3c; /* Green dot color */
+    border-radius: 50%;
+    padding: 2px 6px;
+  }
+  
