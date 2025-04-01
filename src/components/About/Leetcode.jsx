@@ -92,13 +92,13 @@ const LeetCode = () => {
         )}
 
         <div style={{ display: "flex", justifyContent: "space-between", marginTop: "8px" }}>
-          <div style={{ fontSize: "14px" }}>{totalContributions} submissions last year</div>
-          <div style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "14px" }}>
-            <span>Less</span>
-            {["#1e2937", "#0e4429", "#006d32", "#26a641", "#39d353"].map((color, index) => (
-              <div key={index} style={{ width: "12px", height: "12px", backgroundColor: color, borderRadius: "2px" }}></div>
+          <div style={{ fontSize: "20px" , marginTop: "10px"}}>{totalContributions} submissions last year</div>
+          <div style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "14px" ,marginTop: "2px"}}>
+            <span style={{marginTop:"5px" ,marginRight:"2px"}}>Less</span>
+            {[ "#0e4429", "#006d32", "#26a641", "#39d353"].map((color, index) => (
+              <div key={index} style={{ width: "12px", height: "12px", backgroundColor: color, borderRadius: "2px" ,marginTop: "8px"}}></div>
             ))}
-            <span>More</span>
+              <span style={{marginTop:"9px" ,marginLeft:"4px"}}>More</span>
           </div>
         </div>
       </div>
