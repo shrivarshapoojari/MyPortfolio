@@ -8,6 +8,7 @@ import rechat from "../../assets/Projects/rechat.png";
 import logify from "../../assets/Projects/logify.png";
 import mernera from "../../assets/Projects/mernera.png";
 import cloudnote from "../../assets/Projects/cloudnote.png";
+import krushi from "../../assets/Projects/krushi.png";
  
  
  
@@ -97,13 +98,13 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={logify}
+              imgPath={krushi}
               isBlog={false}
-              git={false}
-              title="Logify"
-              description="Logify is a Unity-based 3D logic gate simulator built with C#, enabling students to explore digital electronics interactively. It supports basic, universal gates, and MSI components like multiplexers and decoders. The 3D environment provides learning resources, including descriptions and logic tables. This immersive tool enhances understanding through hands-on simulations."
-              ghLink="https://github.com/shrivarshapoojari/ReChat"
-              demoLink="https://shrivarsha.itch.io/logify"
+              git={true}
+              title="KrushiMitra"
+              description="Krushi Mitra is a smart farming solution built with Flask, React, Gemini AI, and TensorFlow, offering personalized crop recommendations. Farmers can detect plant diseases by uploading leaf images and receive analysis in their preferred language. It predicts crop yield, estimates water requirements, and suggests fertilizers for optimal growth. The platform also provides links to buy recommended fertilizers online. AI-powered insights enhance agricultural decision-making for better productivity."
+              ghLink="https://github.com/shrivarshapoojari/KrushiMitra"
+              demoLink=""
             />
           </Col>
 
