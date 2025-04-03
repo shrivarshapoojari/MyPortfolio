@@ -6,7 +6,10 @@ import Particle from "../Particle";
 import clearzone from "../../assets/Projects/clearzone.png";
 import rechat from "../../assets/Projects/rechat.png";
 import logify from "../../assets/Projects/logify.png";
-
+import mernera from "../../assets/Projects/mernera.png";
+import cloudnote from "../../assets/Projects/cloudnote.png";
+ 
+ 
  
 
 function Projects() {
@@ -38,7 +41,7 @@ function Projects() {
               imgPath={rechat}
               isBlog={false}
               git={true}
-              title="Rechat"
+              title="ReChat"
               description="ReChat is a real-time chat application built with the MERN stack and Socket.io, offering seamless messaging with WebSockets. It features OTP-based authentication, file sharing, friend requests, and group chats. Users can enjoy responsive search, typing indicators, and instant message alerts. The UI was built with React and MUI for an intuitive experience."
               ghLink="https://github.com/shrivarshapoojari/ReChat"
               demoLink="https://rechaat.vercel.app/"
@@ -62,13 +65,13 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={logify}
+              imgPath={mernera}
               isBlog={false}
-              git={false}
-              title="Logify"
-              description="Logify is a Unity-based 3D logic gate simulator built with C#, enabling students to explore digital electronics interactively. It supports basic, universal gates, and MSI components like multiplexers and decoders. The 3D environment provides learning resources, including descriptions and logic tables. This immersive tool enhances understanding through hands-on simulations."
-              ghLink="https://github.com/shrivarshapoojari/ReChat"
-              demoLink="https://shrivarsha.itch.io/logify"
+              git={true}
+              title="MERNERA"
+              description="MERNERA is a SAAS platform where institutes create and assign courses to instructors, who can upload lectures and quizzes. Students can subscribe to courses, attend quizzes, and learn at their own pace. A live chat feature allows real-time query resolution with instructors. The platform ensures secure payments using Stripe for course subscriptions. It provides a seamless learning experience with structured course management."
+              ghLink="https://github.com/shrivarshapoojari/MerneraV2"
+              demoLink="https://mernera.vercel.app/"
             />
           </Col>
 
@@ -78,13 +81,13 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={logify}
+              imgPath={cloudnote}
               isBlog={false}
-              git={false}
-              title="Logify"
-              description="Logify is a Unity-based 3D logic gate simulator built with C#, enabling students to explore digital electronics interactively. It supports basic, universal gates, and MSI components like multiplexers and decoders. The 3D environment provides learning resources, including descriptions and logic tables. This immersive tool enhances understanding through hands-on simulations."
-              ghLink="https://github.com/shrivarshapoojari/ReChat"
-              demoLink="https://shrivarsha.itch.io/logify"
+              git={true}
+              title="CloudNote"
+              description="CloudNote is an online note-taking system built with Spring Boot and React, focusing on secure authentication and user management. It implements Spring Security with GitHub OAuth and multi-factor authentication using Google Authenticator. A custom logger tracks all user activities, ensuring detailed event logging. Admins can monitor user registrations, note creation, and system logs. They also have control over enabling or disabling user accounts for enhanced security."
+              ghLink="https://github.com/shrivarshapoojari/CloudNote-Spring"
+              demoLink=""
             />
           </Col>
 
