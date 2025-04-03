@@ -131,6 +131,46 @@ function Projects() {
               demoLink="https://cementstrengthpredictor.onrender.com/"
             />
           </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={predecem}
+              isBlog={false}
+              git={true}
+              title="CreditGuard"
+              description="CreditGuard is a machine learning-powered system built with Flask to predict credit card defaults based on user financial data. It analyzes factors like transaction history, credit utilization, and payment behavior to assess default risk. The model helps financial institutions make informed lending decisions and reduce financial risks. CreditGuard enhances credit assessment with accurate, data-driven predictions."
+              ghLink="https://github.com/shrivarshapoojari/Credit-Card-Default-Prediction"
+              demoLink="https://credit-card-default-prediction-vwuu.onrender.com/"
+            />
+          </Col>
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={predecem}
+              isBlog={false}
+              git={true}
+              title="SpringFlow"
+              description="SpringFlow is a project management REST API built with Spring Boot, enabling efficient task tracking and collaboration. It allows users to create projects, assign issues, track progress, chat, and comment on tasks. The API supports updating completion status and managing workflows seamlessly. It features three subscription models that limit the number of projects users can create. SpringFlow enhances project organization with structured issue management and real-time collaboration."
+              ghLink="https://github.com/shrivarshapoojari/SpringFlow"
+              demoLink= ""
+            />
+          </Col>
+
+
+
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={predecem}
+              isBlog={false}
+              git={true}
+              title="Springify"
+              description="SpringFlow is a project management REST API built with Spring Boot, enabling efficient task tracking and collaboration. It allows users to create projects, assign issues, track progress, chat, and comment on tasks. The API supports updating completion status and managing workflows seamlessly. It features three subscription models that limit the number of projects users can create. SpringFlow enhances project organization with structured issue management and real-time collaboration."
+              ghLink="https://github.com/shrivarshapoojari/SpringFlow"
+              demoLink= ""
+            />
+          </Col>
 
          
         </Row>
