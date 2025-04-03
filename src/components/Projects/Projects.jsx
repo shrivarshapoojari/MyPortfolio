@@ -9,9 +9,8 @@ import logify from "../../assets/Projects/logify.png";
 import mernera from "../../assets/Projects/mernera.png";
 import cloudnote from "../../assets/Projects/cloudnote.png";
 import krushi from "../../assets/Projects/krushi.png";
- 
- 
- 
+import tablescribe from "../../assets/Projects/tablescribe.png"
+import predecem from "../../assets/Projects/predcem.png"
 
 function Projects() {
   return (
@@ -105,6 +104,31 @@ function Projects() {
               description="Krushi Mitra is a smart farming solution built with Flask, React, Gemini AI, and TensorFlow, offering personalized crop recommendations. Farmers can detect plant diseases by uploading leaf images and receive analysis in their preferred language. It predicts crop yield, estimates water requirements, and suggests fertilizers for optimal growth. The platform also provides links to buy recommended fertilizers online. AI-powered insights enhance agricultural decision-making for better productivity."
               ghLink="https://github.com/shrivarshapoojari/KrushiMitra"
               demoLink=""
+            />
+          </Col>
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={tablescribe}
+              isBlog={false}
+              git={true}
+              title="TableScribe"
+              description="TableScribe is a table extraction tool built with Microsoft Table Transformer, React, and Flask, designed to digitize tabular data. It converts raw tables from scanned or digital images into Excel format with high accuracy. The system enhances document processing by automating table detection and extraction. It outperforms traditional tools like Excalibur and Camelot, which struggle with scanned images. TableScribe simplifies data conversion, making old records easily accessible and editable."
+              ghLink="https://github.com/shrivarshapoojari/TableScribe"
+              demoLink=""
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={predecem}
+              isBlog={false}
+              git={true}
+              title="Predecem"
+              description="Predecem is a machine learning-powered tool built with Flask to predict concrete strength based on various material parameters. It analyzes input features like cement composition, water ratio, and curing time to provide accurate strength estimates. The model helps engineers and builders optimize material selection for better durability. Predecem enhances construction planning by offering data-driven strength predictions."
+              ghLink="https://github.com/shrivarshapoojari/Predecem"
+              demoLink="https://cementstrengthpredictor.onrender.com/"
             />
           </Col>
 
