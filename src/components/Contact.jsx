@@ -1,7 +1,7 @@
  
 import { useState } from "react"
 import Particle from "./Particle"
-
+import { Container} from "react-bootstrap";
 function Contact() {
   const [formData, setState] = useState({
     name: "",
@@ -32,15 +32,17 @@ function Contact() {
   }
 
   return (
+    <Container fluid className="about-section">
     <div
       style={{
-        backgroundColor: "#0a0a14",
+     
         minHeight: "100vh",
         color: "white",
         fontFamily: "Arial, sans-serif",
         padding: "40px 20px",
-        backgroundImage: "radial-gradient(circle, rgba(50, 50, 80, 0.15) 2px, transparent 2px)",
+         
         backgroundSize: "30px 30px",
+        
       }}
     >
         <Particle/>
@@ -129,7 +131,7 @@ function Contact() {
                   </div>
                   <div>
                     <h3 style={{ fontSize: "18px", fontWeight: "bold" }}>Phone</h3>
-                    <p style={{ color: "#aaa" }}>+91 9876543210</p>
+                    <p style={{ color: "#aaa" }}>+91 8095343487</p>
                   </div>
                 </div>
 
@@ -162,7 +164,7 @@ function Contact() {
                   </div>
                   <div>
                     <h3 style={{ fontSize: "18px", fontWeight: "bold" }}>Email</h3>
-                    <p style={{ color: "#aaa" }}>contact@example.com</p>
+                    <p style={{ color: "#aaa" }}>shrivarshapoojary8095@gmail.com</p>
                   </div>
                 </div>
 
@@ -496,6 +498,7 @@ function Contact() {
         </div>
       </div>
     </div>
+    </Container>
   )
 }
 

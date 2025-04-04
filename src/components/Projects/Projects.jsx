@@ -181,6 +181,17 @@ function Projects() {
               demoLink= ""
             />
           </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={predecem}
+              isBlog={false}
+              git={true}
+              title="Memory Leak Detector"
+              description="MemoryLeakDetection Tool is a C-based memory analysis library designed to detect memory leaks in programs that use dynamic memory allocation. Built using custom memory functions like xcalloc and xfree, it maintains internal databases to track structures and objects created at runtime. The tool uses a graph traversal algorithm to identify unreachable memory blocks—leaked objects—and reports them for cleanup. Developed using low-level system calls like mmap, it helps improve software stability by preventing memory depletion and application crashes."
+              ghLink="https://github.com/shrivarshapoojari/MLD"
+              demoLink= ""
+            />
+          </Col>
 
          
         </Row>
