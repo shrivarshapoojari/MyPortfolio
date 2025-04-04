@@ -11,6 +11,7 @@ import NavBar from './components/Navbar'
 import About from './components/About/About'
 import Footer from './components/Footer'
 import Projects from './components/Projects/Projects'
+import Contact from './components/Contact'
  const App = () => {
    return (
       <BrowserRouter>
@@ -19,6 +20,7 @@ import Projects from './components/Projects/Projects'
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About />} />
           <Route path="/project" element= {<Projects/>}/>
+          <Route path="/contact" element= {<Contact/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

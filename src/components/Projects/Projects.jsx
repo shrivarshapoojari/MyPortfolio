@@ -157,10 +157,7 @@ function Projects() {
           </Col>
 
 
-
-
-
-          <Col md={4} className="project-card">
+  <Col md={4} className="project-card">
             <ProjectCard
               imgPath={predecem}
               isBlog={false}
@@ -168,6 +165,19 @@ function Projects() {
               title="Springify"
               description="SpringFlow is a project management REST API built with Spring Boot, enabling efficient task tracking and collaboration. It allows users to create projects, assign issues, track progress, chat, and comment on tasks. The API supports updating completion status and managing workflows seamlessly. It features three subscription models that limit the number of projects users can create. SpringFlow enhances project organization with structured issue management and real-time collaboration."
               ghLink="https://github.com/shrivarshapoojari/SpringFlow"
+              demoLink= ""
+            />
+          </Col>
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={predecem}
+              isBlog={false}
+              git={true}
+              title="Nimma Yatri"
+              description="Nimma Yatri is an intelligent ride allocation platform built with React and Node, designed to optimize ride distribution and driver earnings. It uses a priority queue system for fair ride assignment based on proximity and availability, reducing denials. A greedy graph algorithm forecasts smart earnings, guiding drivers toward high-demand zones. The Aura Points system rewards drivers for challenging rides and discourages cancellations, ensuring better engagement and balanced supply-demand dynamics."
+              ghLink="https://github.com/shrivarshapoojari/Nimma-Yatri"
               demoLink= ""
             />
           </Col>
