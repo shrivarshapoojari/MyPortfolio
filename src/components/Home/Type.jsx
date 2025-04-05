@@ -1,6 +1,4 @@
  
-// export default Type;
-
  
 import React from "react";
 import TypeIt from "typeit-react";
@@ -22,7 +20,7 @@ function Type() {
           breakLines: false,
           loop: true,
           cursor: true,
-          waitUntilVisible: true,
+          waitUntilVisible: false,
           nextStringDelay: 1500,
         }}
       />
