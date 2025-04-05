@@ -32,27 +32,17 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={clearzone}
-              isBlog={false}
-              git={false}
-              title="ClearZone AI"
-              description= "ClearZoneAI is an AI-powered workplace safety management system that prevents accidents in factories through real-time monitoring and alerts. It detects PPE violations, falls, spills, forklift overspeeding, fire risks, and unsafe behaviors. The system features gesture-based emergency alerts and an evacuation management module for trapped employees. It was built using YOLO, OpenCV, MediaPipe, Flask, and React."
-              ghLink="https://github.com/shrivarshapoojari/Clear-Zone-Ai"
-              demoLink="https://youtu.be/RQ-8UtxbG1k?si=Y3kA9VB68oxoFCS8"
-            />
-          </Col>
 
-          <Col md={4} className="project-card">
+
+        <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={rechat}
+              imgPath={mernera}
               isBlog={false}
               git={true}
-              title="ReChat"
-              description="ReChat is a real-time chat application built with the MERN stack and Socket.io, offering seamless messaging with WebSockets. It features OTP-based authentication, file sharing, friend requests, and group chats. Users can enjoy responsive search, typing indicators, and instant message alerts. The UI was built with React and MUI for an intuitive experience."
-              ghLink="https://github.com/shrivarshapoojari/ReChat"
-              demoLink="https://rechaat.vercel.app/"
+              title="MERNERA"
+              description="MERNERA is a SAAS platform where institutes create and assign courses to instructors, who can upload lectures and quizzes. Students can subscribe to courses, attend quizzes, and learn at their own pace. A live chat feature allows real-time query resolution with instructors. The platform ensures secure payments using Stripe for course subscriptions. It provides a seamless learning experience with structured course management."
+              ghLink="https://github.com/shrivarshapoojari/MerneraV2"
+              demoLink="https://mernera.vercel.app/"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -67,21 +57,36 @@ function Projects() {
             />
           </Col>
           
-
-
-
-
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={mernera}
+              imgPath={rechat}
               isBlog={false}
               git={true}
-              title="MERNERA"
-              description="MERNERA is a SAAS platform where institutes create and assign courses to instructors, who can upload lectures and quizzes. Students can subscribe to courses, attend quizzes, and learn at their own pace. A live chat feature allows real-time query resolution with instructors. The platform ensures secure payments using Stripe for course subscriptions. It provides a seamless learning experience with structured course management."
-              ghLink="https://github.com/shrivarshapoojari/MerneraV2"
-              demoLink="https://mernera.vercel.app/"
+              title="ReChat"
+              description="ReChat is a real-time chat application built with the MERN stack and Socket.io, offering seamless messaging with WebSockets. It features OTP-based authentication, file sharing, friend requests, and group chats. Users can enjoy responsive search, typing indicators, and instant message alerts. The UI was built with React and MUI for an intuitive experience."
+              ghLink="https://github.com/shrivarshapoojari/ReChat"
+              demoLink="https://rechaat.vercel.app/"
             />
           </Col>
+       
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={clearzone}
+              isBlog={false}
+              git={false}
+              title="ClearZone AI"
+              description= "ClearZoneAI is an AI-powered workplace safety management system that prevents accidents in factories through real-time monitoring and alerts. It detects PPE violations, falls, spills, forklift overspeeding, fire risks, and unsafe behaviors. The system features gesture-based emergency alerts and an evacuation management module for trapped employees. It was built using YOLO, OpenCV, MediaPipe, Flask, and React."
+              ghLink="https://github.com/shrivarshapoojari/Clear-Zone-Ai"
+              demoLink="https://youtu.be/RQ-8UtxbG1k?si=Y3kA9VB68oxoFCS8"
+            />
+          </Col>
+
+        
+
+
+
+
+         
 
 
 
