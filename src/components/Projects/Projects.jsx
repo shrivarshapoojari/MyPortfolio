@@ -11,6 +11,14 @@ import cloudnote from "../../assets/Projects/cloudnote.png";
 import krushi from "../../assets/Projects/krushi.png";
 import tablescribe from "../../assets/Projects/tablescribe.png"
 import predecem from "../../assets/Projects/predcem.png"
+import credit from "../../assets/Projects/credit.png"
+import mld from "../../assets/Projects/mld.png"
+import nimmayatri from "../../assets/Projects/nimmayatri.png"
+import springflow from "../../assets/Projects/springflow.png"
+import springify from "../../assets/Projects/springify.png"
+
+
+
 
 function Projects() {
   return (
@@ -133,7 +141,7 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={predecem}
+              imgPath={credit}
               isBlog={false}
               git={true}
               title="CreditGuard"
@@ -146,7 +154,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={predecem}
+              imgPath={springflow}
               isBlog={false}
               git={true}
               title="SpringFlow"
@@ -159,7 +167,7 @@ function Projects() {
 
   <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={predecem}
+              imgPath={springify}
               isBlog={false}
               git={true}
               title="Springify"
@@ -172,7 +180,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={predecem}
+              imgPath={nimmayatri}
               isBlog={false}
               git={true}
               title="Nimma Yatri"
@@ -183,7 +191,7 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={predecem}
+              imgPath={mld}
               isBlog={false}
               git={true}
               title="Memory Leak Detector"
