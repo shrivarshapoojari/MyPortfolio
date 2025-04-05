@@ -36,7 +36,7 @@ function Projects() {
             <ProjectCard
               imgPath={clearzone}
               isBlog={false}
-              git={true}
+              git={false}
               title="ClearZone AI"
               description= "ClearZoneAI is an AI-powered workplace safety management system that prevents accidents in factories through real-time monitoring and alerts. It detects PPE violations, falls, spills, forklift overspeeding, fire risks, and unsafe behaviors. The system features gesture-based emergency alerts and an evacuation management module for trapped employees. It was built using YOLO, OpenCV, MediaPipe, Flask, and React."
               ghLink="https://github.com/shrivarshapoojari/Clear-Zone-Ai"
