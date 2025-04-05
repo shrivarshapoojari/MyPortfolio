@@ -8,10 +8,11 @@ import '../../../src/index.css';
 
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
+ 
+ 
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 function Home2() {
   return (
@@ -71,27 +72,7 @@ function Home2() {
               Feel free to <span className="purple">connect </span>with me
             </p>
             <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/shrivarshapoojari"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
+            <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/shrivarsha-poojary-960691249/"
                   target="_blank"
@@ -103,14 +84,26 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://github.com/shrivarshapoojari"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <AiFillInstagram />
+                  <AiFillGithub />
                 </a>
               </li>
+               <li className="social-icons">
+                            <a
+                              href="https://leetcode.com/u/shrivarsha/"
+                              className="icon-colour home-social-icons"
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                            >
+                         <SiLeetcode />
+                            </a>
+                          </li>
+            
+              
             </ul>
           </Col>
         </Row>
