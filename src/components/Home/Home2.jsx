@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../assets/avatar.svg";
+import myphoto from "../../assets/myphoto.png";
 import Tilt from "react-parallax-tilt";
 import '../../../src/style.css';
 import '../../../src/index.css';
@@ -22,6 +23,9 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
+              I am Shrivarsha Poojary , a 3rd year CSE student at <b className="purple">RV College of Engineering </b> Bengaluru
+              <br/>
+              <br/>
               I have a deep passion for <b className="purple">Computer Science</b> and love exploring its core domains.
               <br />
               <br />I have a strong foundation in
@@ -56,7 +60,7 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img src={myphoto} className="img-fluid" alt="Shrivarsha" />
             </Tilt>
           </Col>
         </Row>

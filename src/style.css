@@ -328,7 +328,7 @@ html {
       display: none !important;
     }
   }
-  
+/*   
   .myAvtar {
     justify-content: center !important;
     padding-top: 9em !important;
@@ -338,6 +338,39 @@ html {
     .myAvtar {
       padding-top: 2em !important;
       padding-bottom: 2em !important;
+    }
+  } */
+  
+  .myAvtar {
+    text-align: center;
+    padding-top: 9em !important;
+  }
+  
+  .myAvtar img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 70% 30%; 
+    border: 4px solid rgba(255, 255, 255, 0.15); /* light white border */
+    box-shadow: 0 8px 30px rgba(136, 84, 208, 0.3); /* soft violet glow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .myAvtar img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(136, 84, 208, 0.5); /* stronger glow on hover */
+  }
+  
+  @media (max-width: 767px) {
+    .myAvtar {
+      padding-top: 2em !important;
+      padding-bottom: 2em !important;
+    }
+  
+    .myAvtar img {
+      width: 180px;
+      height: 180px;
     }
   }
   
