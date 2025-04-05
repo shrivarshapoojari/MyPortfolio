@@ -1,4 +1,6 @@
 import React from 'react'
+import toast, { Toaster } from 'react-hot-toast';
+
 import { useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { Routes, Route } from 'react-router-dom'
@@ -31,6 +33,10 @@ import Resume from './components/Resume/Resume'
        <Preloader load={load} />
        <div className="App" id={load ? "no-scroll" : "scroll"}>
       <NavBar/>
+      <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
       <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home/>} />

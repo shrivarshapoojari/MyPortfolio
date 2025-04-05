@@ -3,6 +3,7 @@ import { useState } from "react"
 import Particle from "./Particle"
 import { Container} from "react-bootstrap";
 import emailjs from '@emailjs/browser';
+import toast from "react-hot-toast";
 function Contact() {
   const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -15,6 +16,7 @@ const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
     message: "",
   })
 
+  const [sending,setSending]=useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData((prevState) => ({
@@ -28,7 +30,7 @@ const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
    
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+  setSending(true);
     emailjs
       .send(
         serviceID, 
@@ -45,13 +47,14 @@ const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
       )
       .then(
         (result) => {
-          console.log("SUCCESS!", result.text);
-          alert("Message sent!");
-          setFormData({ name: "", email: "", subject: "", message: "" }); // reset form
+          toast.success("Message sent successfully")
+          setFormData({ name: "", email: "", subject: "", message: "" }); 
+          setSending(false);
         },
         (error) => {
-          console.log("FAILED...", error.text);
-          alert("Message failed to send. Please try again.");
+           toast.error("Failed to send message")
+           toast.error("Please try again")
+           setSending(false)
         }
       );
   };
@@ -502,6 +505,7 @@ const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
               <button
                 type="submit"
+                disabled={sending}
                 style={{
                   backgroundColor: "#a855f7",
                   color: "white",
@@ -510,13 +514,13 @@ const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
                   padding: "14px 28px",
                   fontSize: "16px",
                   fontWeight: "bold",
-                  cursor: "pointer",
+                  cursor: sending ? "not-allowed" : "pointer",
                   transition: "all 0.3s ease",
                   alignSelf: "flex-start",
                   marginTop: "10px",
                 }}
               >
-                Send Message
+               {!sending? "Send Message" : "Sending"}
               </button>
             </form>
           </div>
