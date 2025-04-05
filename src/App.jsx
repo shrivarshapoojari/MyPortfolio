@@ -15,6 +15,7 @@ import Contact from './components/Contact'
 import ScrollToTop from "./components/ScrollToTop";
 import Preloader from "../src/components/Pre";
 import { useEffect } from 'react'
+import Resume from './components/Resume/Resume'
  const App = () => {
   const [load, updateLoad] = useState(true);
 
@@ -36,6 +37,7 @@ import { useEffect } from 'react'
           <Route path="/about" element={<About />} />
           <Route path="/project" element= {<Projects/>}/>
           <Route path="/contact" element= {<Contact/>}/>
+          <Route path="/resume" element= {<Resume/>}/>
         </Routes>
         <Footer/>
         </div>
