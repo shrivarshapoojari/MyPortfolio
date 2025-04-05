@@ -2,8 +2,13 @@
 import { useState } from "react"
 import Particle from "./Particle"
 import { Container} from "react-bootstrap";
+import emailjs from '@emailjs/browser';
 function Contact() {
-  const [formData, setState] = useState({
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
@@ -12,24 +17,44 @@ function Contact() {
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    setState((prevState) => ({
+    setFormData((prevState) => ({
       ...prevState,
       [name]: value,
     }))
   }
 
+ 
+   
+   
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    // Here you would typically send the data to a server
-    alert("Thank you for your message! I will get back to you soon.")
-    setState({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    })
-  }
+    e.preventDefault();
+  
+    emailjs
+      .send(
+        serviceID, 
+        templateID,  
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        {
+          publicKey: publicKey, 
+        }
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          alert("Message sent!");
+          setFormData({ name: "", email: "", subject: "", message: "" }); // reset form
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("Message failed to send. Please try again.");
+        }
+      );
+  };
 
   return (
     <Container fluid className="about-section">
