@@ -3,9 +3,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
   AiOutlineTwitter,
-  AiFillInstagram,
+  
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 function Footer() {
   let date = new Date();
@@ -21,6 +22,16 @@ function Footer() {
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
+          <li className="social-icons">
+              <a
+                href="https://linkedin.com/in/shrivarsha-poojary-960691249/"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+            </li>
             <li className="social-icons">
               <a
                 href="https://github.com/shrivarshapoojari"
@@ -33,34 +44,16 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://twitter.com/"
+                href="https://leetcode.com/u/shrivarsha/"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <AiOutlineTwitter />
+           <SiLeetcode />
               </a>
             </li>
-            <li className="social-icons">
-              <a
-                href="linkedin.com/in/shrivarsha-poojary-960691249/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillInstagram />
-              </a>
-            </li>
+          
+            
           </ul>
         </Col>
       </Row>
