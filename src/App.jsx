@@ -2,7 +2,7 @@ import React from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 
 import { useState } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Navigate } from 'react-router-dom'
 import { Routes, Route } from 'react-router-dom'
 import Home from './components/Home/Home'
 import './index.css'
@@ -44,6 +44,7 @@ import Resume from './components/Resume/Resume'
           <Route path="/project" element= {<Projects/>}/>
           <Route path="/contact" element= {<Contact/>}/>
           <Route path="/resume" element= {<Resume/>}/>
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer/>
         </div>
@@ -52,4 +53,7 @@ import Resume from './components/Resume/Resume'
  }
  
  export default App
+
+
+
  
