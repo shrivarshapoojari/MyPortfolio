@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
+import {Particle} from "../Particle";
  
 import clearzone from "../../assets/Projects/clearzone.png";
 import rechat from "../../assets/Projects/rechat.png";

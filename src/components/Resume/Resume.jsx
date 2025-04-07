@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
  
 import Button from "react-bootstrap/Button";
-import Particle from "../Particle";
+import {Particle} from "../Particle";
 import Shrivarsha_Poojary_Resume from "../../assets/Shrivarsha_Poojary_Resume.pdf";
 import resumePreview from "../../assets/resumePreview.png";
 import { AiOutlineDownload } from "react-icons/ai";

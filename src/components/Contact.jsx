@@ -1,6 +1,6 @@
  
 import { useState } from "react"
-import Particle from "./Particle"
+import {Particle} from "./Particle"
 import { Container} from "react-bootstrap";
 import emailjs from '@emailjs/browser';
 import toast from "react-hot-toast";

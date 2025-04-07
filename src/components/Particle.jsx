@@ -1,8 +1,9 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // Load lightweight version
-
-const Particle = () => {
+import { jsx } from 'react/jsx-runtime'
+export function Particle() {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -88,4 +89,4 @@ const Particle = () => {
   );
 };
 
-export default Particle;
+ 
