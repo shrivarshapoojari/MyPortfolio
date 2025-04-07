@@ -7,6 +7,7 @@ import resumePreview from "../../assets/resumePreview.png";
 import { AiOutlineDownload } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { Container, Row } from "react-bootstrap";
+import { Helmet } from 'react-helmet-async'
 function Resume() {
   const [width, setWidth] = useState(1200);
 
@@ -56,7 +57,24 @@ function Resume() {
   };
 
   return (
+    <>
+     <Helmet>
+     <title>Resume | Shrivarsha Poojary</title>
+     <meta name="description" content="View Shrivarsha Poojary's resume. Academic background, technical skills, certifications, and achievements from RV College of Engineering." />
+        <meta name="keywords" content="Shrivarsha, Poojary, RVCE, Portfolio, Developer, React, AI" />
+        <meta name="author" content="Shrivarsha Poojary" />
+        <meta property="og:title" content="Shrivarsha Poojary | Portfolio" />
+        <meta property="og:description" content="Check out my projects, skills, and achievements!" />
+        <meta property="og:image" content="https://www.shrivarshapoojary.in/logo.png" />
+        <meta property="og:url" content="https://www.shrivarshapoojary.in/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Shrivarsha Poojary | Portfolio" />
+        <meta name="twitter:description" content="Check out my work, skills, and more." />
+        <meta name="twitter:image" content="https://www.shrivarshapoojary.in/logo.png" />
+      </Helmet>
     <div>
+    
       <Container fluid style={wrapperStyles}>
         <Particle />
 
@@ -89,6 +107,7 @@ function Resume() {
         {/* </motion.div> */}
       </Container>
     </div>
+    </>
   );
 }
 

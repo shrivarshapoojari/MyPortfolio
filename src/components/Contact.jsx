@@ -4,6 +4,8 @@ import {Particle} from "./Particle"
 import { Container} from "react-bootstrap";
 import emailjs from '@emailjs/browser';
 import toast from "react-hot-toast";
+import { Helmet } from 'react-helmet-async'
+
 function Contact() {
   const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -60,6 +62,22 @@ const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
   };
 
   return (
+    <>
+    <Helmet>
+    <title>Contact | Shrivarsha Poojary</title>
+    <meta name="description" content="Get in touch with Shrivarsha Poojary for collaboration, projects, or opportunities. Let's connect!" />
+        <meta name="keywords" content="Shrivarsha, Poojary, RVCE, Portfolio, Developer, React, AI" />
+        <meta name="author" content="Shrivarsha Poojary" />
+        <meta property="og:title" content="Shrivarsha Poojary | Portfolio" />
+        <meta property="og:description" content="Check out my projects, skills, and achievements!" />
+        <meta property="og:image" content="https://www.shrivarshapoojary.in/logo.png" />
+        <meta property="og:url" content="https://www.shrivarshapoojary.in/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Shrivarsha Poojary | Portfolio" />
+        <meta name="twitter:description" content="Check out my work, skills, and more." />
+        <meta name="twitter:image" content="https://www.shrivarshapoojary.in/logo.png" />
+      </Helmet>
     <Container fluid className="about-section">
     <div
       style={{
@@ -484,6 +502,7 @@ const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
       </div>
     </div>
     </Container>
+    </>
   )
 }
 
