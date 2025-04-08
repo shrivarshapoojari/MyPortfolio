@@ -56,9 +56,11 @@ function About() {
         </h1>
 
         <Techstack />
+
+        <Github />
         <Leetcode/>
        
-        <Github />
+      
      
       </Container>
     </Container>
