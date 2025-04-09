@@ -3,7 +3,14 @@
 import { useState } from "react"
 import web from "../../assets/certificates/web.png"
 import ds from "../../assets/certificates/ds.png"
+import ds2 from "../../assets/certificates/ds2.png"
 import edge from "../../assets/certificates/edge.png"
+import java from "../../assets/certificates/java.png"
+import c from "../../assets/certificates/c.png"
+import net from "../../assets/certificates/net.png"
+import springboot from "../../assets/certificates/springboot.png"
+import { Particle } from "../Particle"
+
 export default function Certificate() {
   
   const [certifications] = useState([
@@ -14,6 +21,14 @@ export default function Certificate() {
       date: "September 2023",
       previewUrl:  web,
       verifyUrl: "https://www.udemy.com/certificate/UC-dbe87ef4-7365-4f71-93b6-126312b7510f/",
+    },
+    {
+      id: 8,
+      name: "SpringBoot Certification",
+      issuer: "Udemy",
+      date: "December 2024",
+      previewUrl:  springboot,
+      verifyUrl: "https://www.udemy.com/certificate/UC-8a0c9ab1-3aa1-4cf4-988b-189ebe0099f4/",
     },
     {
       id: 2,
@@ -33,12 +48,37 @@ export default function Certificate() {
     },
     {
       id: 4,
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
+      name: "Java with  DSA and System Design",
+      issuer: "PW Skills",
       date: "September 2023",
-      previewUrl: "/placeholder.svg?height=200&width=300",
-      verifyUrl: "https://aws.amazon.com/verify",
+      previewUrl:  java,
+      verifyUrl: "https://cdn.pwskills.com/learn/certificates/7c05eb7e-f4d6-487c-8f66-08aa4e09b206.pdf",
     },
+    {
+      id: 5,
+      name: "Programming in C",
+      issuer: "Infosys Springboard",
+      date: "August 2023",
+      previewUrl:  c,
+      verifyUrl: "https://verify.onwingspan.com/",
+    },
+    {
+      id: 6,
+      name: "Data Science for Engineers",
+      issuer: "NPTEL",
+      date: "September 2024",
+      previewUrl:  ds2,
+      verifyUrl: "https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs133/Course/NPTEL24CS133S33200049002751245.pdf",
+    },
+    {
+      id: 7,
+      name: "Introduction to Networks",
+      issuer: "Cisco Networking Academy",
+      date: "August 2024",
+      previewUrl:  net,
+      verifyUrl: "https://www.credly.com/badges/ab1d2d00-3a98-45ee-a7fc-398e945bf7ff/public_url",
+    },
+ 
   ])
 
   const handleVerify = (url) => {
@@ -48,15 +88,17 @@ export default function Certificate() {
   return (
     <div
       style={{
-        backgroundColor: "#0a0a14",
+        
+        marginTop: "5%",
         minHeight: "100vh",
         color: "white",
         fontFamily: "Arial, sans-serif",
         padding: "40px 20px",
-        backgroundImage: "radial-gradient(circle, rgba(50, 50, 80, 0.15) 2px, transparent 2px)",
+        
         backgroundSize: "30px 30px",
       }}
     >
+      <Particle/>
       <div
         style={{
           maxWidth: "1200px",
@@ -77,7 +119,7 @@ export default function Certificate() {
             My <span style={{ color: "#a855f7" }}>Certifications</span>
           </h1>
           <p style={{ fontSize: "18px", color: "#aaa" }}>
-            A collection of my professional certifications and achievements in the tech industry.
+            A collection of my professional certifications.
           </p>
         </header>
 

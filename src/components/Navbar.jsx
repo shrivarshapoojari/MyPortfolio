@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../assets/logo.png"
 import Button from "react-bootstrap/Button";
+import { GrCertificate } from "react-icons/gr";
 import { Link } from "react-router-dom";
  
 import { GrContact } from "react-icons/gr";
@@ -60,14 +61,14 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
+            <Nav.Link
                 as={Link}
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
-            </Nav.Item>
+            </Nav.Item>  
 
             <Nav.Item>
               <Nav.Link
@@ -81,6 +82,16 @@ function NavBar() {
                 Projects
               </Nav.Link>
             </Nav.Item>
+            
+            <Nav.Item>
+            <Nav.Link
+                as={Link}
+                to="/certifications"
+                onClick={() => updateExpanded(false)}
+              >
+                <GrCertificate style={{ marginBottom: "2px" }} /> Certifications
+              </Nav.Link>
+            </Nav.Item>  
 
             <Nav.Item>
               <Nav.Link
@@ -91,6 +102,7 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
+
             <Nav.Item>
               <Nav.Link
                 as={Link}
@@ -101,6 +113,8 @@ function NavBar() {
                 <GrContact style={{ marginBottom: "2px",  marginRight:"5px"}} />Contact
               </Nav.Link>
             </Nav.Item>
+
+
 
 
 {
