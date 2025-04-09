@@ -90,10 +90,12 @@ export default function Certificate() {
       style={{
         
         marginTop: "5%",
+        paddingLeft: "5%",
+        paddingRight: "5%",
         minHeight: "100vh",
         color: "white",
         fontFamily: "Arial, sans-serif",
-        padding: "40px 20px",
+        // padding: "40px 20px",
         
         backgroundSize: "30px 30px",
       }}
@@ -126,8 +128,13 @@ export default function Certificate() {
         <div
           style={{
             display: "grid",
+          
             gridTemplateColumns: "repeat(auto-fill, minmax(500px, 1fr))",
             gap: "30px",
+     
+            
+          
+
           }}
         >
           {certifications.map((cert) => (
@@ -137,6 +144,7 @@ export default function Certificate() {
                 backgroundColor: "rgba(30, 30, 50, 0.4)",
                 borderRadius: "16px",
                 overflow: "hidden",
+               
                 boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
                 backdropFilter: "blur(5px)",
                 border: "1px solid rgba(255, 255, 255, 0.05)",
@@ -176,6 +184,7 @@ export default function Certificate() {
     width: "100%",
     position: "relative",
     backgroundColor: "#000",
+    
   }}
 >
   <img
