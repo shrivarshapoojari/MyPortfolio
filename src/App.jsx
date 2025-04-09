@@ -45,7 +45,7 @@ import Certificate from './components/Certifications/Certificate';
           <Route path="/project" element= {<Projects/>}/>
           <Route path="/contact" element= {<Contact/>}/>
           <Route path="/resume" element= {<Resume/>}/>
-          <Route path="/certifications" element= {<Certificate/>}/>
+          {/* <Route path="/certifications" element= {<Certificate/>}/> */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer/>
