@@ -1,5 +1,4 @@
  
-
 import { useState } from "react"
 import web from "../../assets/certificates/web.png"
 import ds from "../../assets/certificates/ds.png"
@@ -12,34 +11,35 @@ import springboot from "../../assets/certificates/springboot.png"
 import { Particle } from "../Particle"
 
 export default function Certificate() {
-  
   const [certifications] = useState([
     {
       id: 1,
       name: "Full Stack Web Development",
       issuer: "Udemy",
       date: "September 2023",
-      previewUrl:  web,
+      previewUrl: web,
       verifyUrl: "https://www.udemy.com/certificate/UC-dbe87ef4-7365-4f71-93b6-126312b7510f/",
     },
     {
-      id: 8,
+      id: 2,
       name: "SpringBoot Certification",
       issuer: "Udemy",
       date: "December 2024",
-      previewUrl:  springboot,
+      previewUrl: springboot,
       verifyUrl: "https://www.udemy.com/certificate/UC-8a0c9ab1-3aa1-4cf4-988b-189ebe0099f4/",
     },
-    {
-      id: 2,
-      name: "Data Science Masters",
-      issuer: "PW Skills",
-      date: "April 2024",
-      previewUrl: ds,
-      verifyUrl: "https://cdn.pwskills.com/learn/certificates/6af0cc64-7b75-4e2a-9c6e-6ad22be063c3.pdf",
-    },
+   
     {
       id: 3,
+      name: "Data Science for Engineers",
+      issuer: "NPTEL",
+      date: "September 2024",
+      previewUrl: ds2,
+      verifyUrl:
+        "https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs133/Course/NPTEL24CS133S33200049002751245.pdf",
+    },
+    {
+      id: 4,
       name: "Edge Computing",
       issuer: "NPTEL",
       date: "March 2025",
@@ -47,60 +47,79 @@ export default function Certificate() {
       verifyUrl: "https://nptel.ac.in/noc/E_Certificate/NPTEL25CS28S53640018201380742",
     },
     {
-      id: 4,
-      name: "Java with  DSA and System Design",
+      id: 5,
+      name: "Java with DSA and System Design",
       issuer: "PW Skills",
       date: "September 2023",
-      previewUrl:  java,
+      previewUrl: java,
       verifyUrl: "https://cdn.pwskills.com/learn/certificates/7c05eb7e-f4d6-487c-8f66-08aa4e09b206.pdf",
     },
     {
-      id: 5,
-      name: "Programming in C",
-      issuer: "Infosys Springboard",
-      date: "August 2023",
-      previewUrl:  c,
-      verifyUrl: "https://verify.onwingspan.com/",
-    },
-    {
       id: 6,
-      name: "Data Science for Engineers",
-      issuer: "NPTEL",
-      date: "September 2024",
-      previewUrl:  ds2,
-      verifyUrl: "https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs133/Course/NPTEL24CS133S33200049002751245.pdf",
+      name: "Data Science Masters",
+      issuer: "PW Skills",
+      date: "April 2024",
+      previewUrl: ds,
+      verifyUrl: "https://cdn.pwskills.com/learn/certificates/6af0cc64-7b75-4e2a-9c6e-6ad22be063c3.pdf",
     },
     {
       id: 7,
+      name: "Programming in C",
+      issuer: "Infosys Springboard",
+      date: "August 2023",
+      previewUrl: c,
+      verifyUrl: "https://verify.onwingspan.com/",
+    },
+    
+    {
+      id: 8,
       name: "Introduction to Networks",
       issuer: "Cisco Networking Academy",
       date: "August 2024",
-      previewUrl:  net,
+      previewUrl: net,
       verifyUrl: "https://www.credly.com/badges/ab1d2d00-3a98-45ee-a7fc-398e945bf7ff/public_url",
     },
- 
   ])
 
   const handleVerify = (url) => {
     window.open(url, "_blank")
   }
 
+  // Responsive styles based on screen width
+  const getGridStyle = () => {
+    // Use window.innerWidth to determine the current viewport width
+    const viewportWidth = typeof window !== "undefined" ? window.innerWidth : 0
+
+    if (viewportWidth <= 768) {
+      // Mobile view
+      return {
+        display: "grid",
+        gridTemplateColumns: "1fr", // Single column for mobile
+        gap: "20px",
+        width: "100%",
+      }
+    } else {
+      // Tablet and desktop view
+      return {
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(500px, 1fr))",
+        gap: "30px",
+      }
+    }
+  }
+
   return (
     <div
       style={{
-        
         marginTop: "5%",
-        paddingLeft: "5%",
-        paddingRight: "5%",
+        padding: "5%", // Unified padding
         minHeight: "100vh",
         color: "white",
         fontFamily: "Arial, sans-serif",
-        // padding: "40px 20px",
-        
         backgroundSize: "30px 30px",
       }}
     >
-      <Particle/>
+      <Particle />
       <div
         style={{
           maxWidth: "1200px",
@@ -113,30 +132,19 @@ export default function Certificate() {
         <header style={{ marginBottom: "40px" }}>
           <h1
             style={{
-              fontSize: "42px",
+              fontSize: "clamp(28px, 5vw, 42px)", // Responsive font size
               fontWeight: "bold",
               marginBottom: "10px",
             }}
           >
             My <span style={{ color: "#a855f7" }}>Certifications</span>
           </h1>
-          <p style={{ fontSize: "18px", color: "#aaa" }}>
+          <p style={{ fontSize: "clamp(16px, 3vw, 18px)", color: "#aaa" }}>
             A collection of my professional certifications.
           </p>
         </header>
 
-        <div
-          style={{
-            display: "grid",
-          
-            gridTemplateColumns: "repeat(auto-fill, minmax(500px, 1fr))",
-            gap: "30px",
-     
-            
-          
-
-          }}
-        >
+        <div style={getGridStyle()}>
           {certifications.map((cert) => (
             <div
               key={cert.id}
@@ -144,11 +152,11 @@ export default function Certificate() {
                 backgroundColor: "rgba(30, 30, 50, 0.4)",
                 borderRadius: "16px",
                 overflow: "hidden",
-               
                 boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
                 backdropFilter: "blur(5px)",
                 border: "1px solid rgba(255, 255, 255, 0.05)",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                width: "100%", // Ensure card takes full width of its grid cell
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-5px)"
@@ -159,27 +167,7 @@ export default function Certificate() {
                 e.currentTarget.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.1)"
               }}
             >
-              {/* <div
-                style={{
-                  width: "100%",
-                  height: "200px",
-                  overflow: "hidden",
-                  position: "relative",
-                }}
-              >
-                <img
-                  src={cert.previewUrl || "/placeholder.svg"}
-                  alt={`${cert.name} Certificate`}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    objectPosition: "center",
-                  }}
-                    
-                /> */}
-
-<div
+              <div
   style={{
     width: "100%",
     position: "relative",
@@ -216,7 +204,7 @@ export default function Certificate() {
               <div style={{ padding: "20px" }}>
                 <h2
                   style={{
-                    fontSize: "24px",
+                    fontSize: "clamp(18px, 4vw, 24px)", // Responsive font size
                     fontWeight: "bold",
                     marginBottom: "8px",
                   }}
@@ -225,7 +213,7 @@ export default function Certificate() {
                 </h2>
                 <p
                   style={{
-                    fontSize: "16px",
+                    fontSize: "clamp(14px, 3vw, 16px)", // Responsive font size
                     color: "#aaa",
                     marginBottom: "20px",
                   }}
@@ -281,44 +269,14 @@ export default function Certificate() {
                     </svg>
                     Verify Certificate
                   </button>
-
-                  {/* <div
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      backgroundColor: "rgba(168, 85, 247, 0.2)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      cursor: "pointer",
-                    }}
-                    title="View Details"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#a855f7"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="12" y1="8" x2="12" y2="16"></line>
-                      <line x1="8" y1="12" x2="16" y2="12"></line>
-                    </svg>
-                  </div> */}
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        
       </div>
     </div>
   )
 }
+
+
