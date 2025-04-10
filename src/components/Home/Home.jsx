@@ -14,7 +14,7 @@ function Home() {
     <Helmet>
         <title>Shrivarsha Poojary | Portfolio</title>
         <meta name="description" content="Welcome to my portfolio. I'm a student at RVCE Bengaluru, passionate about web development and AI." />
-        <meta name="keywords" content="Shrivarsha, Poojary, RVCE, Portfolio, Developer, React, AI" />
+        <meta name="keywords" content="Shrivarsha, Poojary, RVCE, Portfolio, Developer, React, AI,SDE,Intern,Engineer" />
         <meta name="author" content="Shrivarsha Poojary" />
         <meta property="og:title" content="Shrivarsha Poojary | Portfolio" />
         <meta property="og:description" content="Check out my projects, skills, and achievements!" />

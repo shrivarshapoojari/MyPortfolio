@@ -9,6 +9,8 @@ import c from "../../assets/certificates/c.png"
 import net from "../../assets/certificates/net.png"
 import springboot from "../../assets/certificates/springboot.png"
 import { Particle } from "../Particle"
+import { Container } from "react-bootstrap"
+import { Helmet } from 'react-helmet-async'
 
 export default function Certificate() {
   const [certifications] = useState([
@@ -109,6 +111,13 @@ export default function Certificate() {
   }
 
   return (
+    <>
+     <Helmet>
+     <title>Contact | Shrivarsha Poojary</title>
+     <meta property="og:title" content="Shrivarsha Poojary | Certifications" />
+     <meta name="keywords" content="Shrivarsha, Poojary, RVCE, Portfolio, Developer, React, AI,SDE" />
+     </Helmet>
+ <Container fluid className="about-section">
     <div
       style={{
         marginTop: "5%",
@@ -276,6 +285,8 @@ export default function Certificate() {
         </div>
       </div>
     </div>
+    </Container>
+    </>
   )
 }
 
