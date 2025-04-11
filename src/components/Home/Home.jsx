@@ -46,7 +46,11 @@ function Home() {
                 <strong className="main-name"> SHRIVARSHA POOJARY</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: 50, textAlign: "left", 
+                           height: "150px" , marginBottom: "20px"
+
+
+              }}>
                 <Type />
               </div>
             </Col>
@@ -69,3 +73,5 @@ function Home() {
 }
 
 export default Home;
+
+
