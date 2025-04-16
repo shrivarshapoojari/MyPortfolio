@@ -23,7 +23,7 @@ function AboutCard() {
               <ImPointRight /> Reading Tech Blogs
             </li>
             <li className="about-activity">
-              <ImPointRight />  Stock Reasearch
+              <ImPointRight />  Stock Research
             </li>
             <li className="about-activity">
               <ImPointRight />  Investing 
