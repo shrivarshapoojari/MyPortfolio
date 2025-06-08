@@ -63,7 +63,7 @@ function Projects() {
               title="MERNERA"
               description="MERNERA is a SAAS platform where institutes create and assign courses to instructors, who can upload lectures and quizzes. Students can subscribe to courses, attend quizzes, and learn at their own pace. A live chat feature allows real-time query resolution with instructors. The platform ensures secure payments using Stripe for course subscriptions. It provides a seamless learning experience with structured course management."
               ghLink="https://github.com/shrivarshapoojari/MerneraV2"
-              demoLink="https://mernera.vercel.app/"
+              demoLink="https://mernera.shrivarshapoojary.in/"
             />
           </Col>
           <Col md={4} className="project-card">

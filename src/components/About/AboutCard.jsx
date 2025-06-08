@@ -20,13 +20,13 @@ function AboutCard() {
           </p>
           <ul>
           <li className="about-activity">
-              <ImPointRight /> Reading Tech Blogs
+              <ImPointRight /> Writing Tech Blogs
             </li>
             <li className="about-activity">
-              <ImPointRight />  Stock Reasearch
+              <ImPointRight /> Exploring Financial Trends
             </li>
             <li className="about-activity">
-              <ImPointRight />  Investing 
+              <ImPointRight />Experimenting with Emerging Technologies
             </li>
             
           </ul>
@@ -34,7 +34,7 @@ function AboutCard() {
           <p style={{ color: "rgb(155 126 172)" }}>
          "Dont cry in the the corner if you want something, work hard, become the best and snatch it!" {" "}
           </p>
-          <footer className="blockquote-footer">Shrivarsha</footer>
+          <footer className="blockquote-footer">Anonymous</footer>
         </blockquote>
       </Card.Body>
     </Card>

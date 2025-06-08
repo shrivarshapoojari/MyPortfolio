@@ -56,7 +56,8 @@ function Home2() {
               I am skilled in <b className="purple">DevOps</b> tools like <b className="purple">Docker, Kubernetes, and AWS</b> for efficient deployment and scalability.
               <br />
               <br />
-              Apart from tech, I have a keen interest in <b className="purple">finance and investing</b>. I analyze stock fundamentals, read investor meet concalls, and invest in quality stocks for the long term.
+ Apart from tech, I have a keen interest in <b className="purple">financial analysis and studying bussiness strategies.</b> I enjoy studying market trends, reading industry reports, and focusing on long-term growth strategies that align with sustainable value creation.
+
             </p>
           </Col>
           <Col md={4} className="myAvtar">
