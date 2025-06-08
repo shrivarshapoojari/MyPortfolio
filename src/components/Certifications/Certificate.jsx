@@ -7,6 +7,7 @@ import edge from "../../assets/certificates/edge.png"
 import java from "../../assets/certificates/java.png"
 import c from "../../assets/certificates/c.png"
 import net from "../../assets/certificates/net.png"
+import docker from "../../assets/certificates/docker.png"
 import springboot from "../../assets/certificates/springboot.png"
 import { Particle } from "../Particle"
 import { Container } from "react-bootstrap"
@@ -21,6 +22,14 @@ export default function Certificate() {
       date: "September 2023",
       previewUrl: web,
       verifyUrl: "https://www.udemy.com/certificate/UC-dbe87ef4-7365-4f71-93b6-126312b7510f/",
+    },
+    {
+      id: 9,
+      name: "Docker Mastery: with Kubernetes +Swarm ",
+      issuer: "Udemy",
+      date: "April 2025",
+      previewUrl: docker,
+      verifyUrl: "https://www.udemy.com/certificate/UC-0e151b94-829e-4d5a-b313-8782db873cd6/",
     },
     {
       id: 2,
