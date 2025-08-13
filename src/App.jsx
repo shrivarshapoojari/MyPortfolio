@@ -17,7 +17,7 @@ import Contact from './components/Contact'
 import ScrollToTop from "./components/ScrollToTop";
 import Preloader from "../src/components/Pre";
 import { useEffect } from 'react'
-import Resume from './components/Resume/Resume'
+// import Resume from './components/Resume/Resume'
 import Certificate from './components/Certifications/Certificate';
  const App = () => {
   const [load, updateLoad] = useState(true);
@@ -44,7 +44,7 @@ import Certificate from './components/Certifications/Certificate';
           <Route path="/about" element={<About />} />
           <Route path="/project" element= {<Projects/>}/>
           <Route path="/contact" element= {<Contact/>}/>
-          <Route path="/resume" element= {<Resume/>}/>
+{/*           <Route path="/resume" element= {<Resume/>}/> */}
           <Route path="/certifications" element= {<Certificate/>}/>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
