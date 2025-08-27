@@ -52,6 +52,26 @@ function Home() {
 
               }}>
                 <Type />
+                  {/* Download Resume & Visit Blog Buttons - Beautiful Styling */}
+                  <div className="home-buttons-wrapper">
+                    {/* <a
+                      href="/assets/Shrivarsha-Resume.pdf"
+                      download
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="home-btn home-btn-resume"
+                    >
+                      Resume
+                    </a> */}
+                    {/* <a
+                      href="https://blog.shrivarshapoojary.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="home-btn home-btn-blog"
+                    >
+                      Visit Blog
+                    </a> */}
+                  </div>
               </div>
             </Col>
 

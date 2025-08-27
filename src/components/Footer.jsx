@@ -7,7 +7,7 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
-
+import { FaBlog } from "react-icons/fa";
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
@@ -40,6 +40,16 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <AiFillGithub />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://blog.shrivarshapoojary.in/"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                 <FaBlog/>
               </a>
             </li>
             <li className="social-icons">

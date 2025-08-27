@@ -11,7 +11,7 @@ function AboutCard() {
             Hello , I am <span className="purple">Shrivarsha Poojary </span>
             from <span className="purple"> Bengaluru</span>
             <br />
-            I am  a 3rd year CSE Student at a  RV College of Engineering Bengaluru.
+            I am  a Final year CSE Student at a  RV College of Engineering Bengaluru.
             <br />
             
             <br />
@@ -20,7 +20,7 @@ function AboutCard() {
           </p>
           <ul>
           <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
+              <ImPointRight /> Writing Tech Blogs <a href="https://blog.shrivarshapoojary.in/" target="_blank" rel="noopener noreferrer" className="purple" style={{ marginLeft: '6px', fontWeight: 500, textDecoration: 'underline dotted' }}>Visit</a>
             </li>
             <li className="about-activity">
               <ImPointRight /> Exploring Financial Trends

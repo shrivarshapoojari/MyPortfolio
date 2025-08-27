@@ -13,6 +13,7 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import { FaBlog } from "react-icons/fa";
 
 function Home2() {
   return (
@@ -24,7 +25,7 @@ function Home2() {
               <span className="purple">HERE'S A LITTLE ABOUT ME</span>
             </h1>
             <p className="home-about-body">
-              I am Shrivarsha Poojary , a 3rd year CSE student at <b className="purple">RV College of Engineering </b> Bengaluru
+              I am Shrivarsha Poojary , Final year CSE student at <b className="purple">RV College of Engineering </b> Bengaluru
               <br/>
               <br/>
               I have a deep passion for <b className="purple">Computer Science</b> and love exploring its core domains.
@@ -91,6 +92,19 @@ function Home2() {
                   <AiFillGithub />
                 </a>
               </li>
+
+                <li className="social-icons">
+                            <a
+                              href="https://blog.shrivarshapoojary.in/"
+                              className="icon-colour home-social-icons"
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                            >
+                          <FaBlog />
+                            </a>
+                          </li>
+
+
                <li className="social-icons">
                             <a
                               href="https://leetcode.com/u/shrivarsha/"
@@ -101,6 +115,7 @@ function Home2() {
                          <SiLeetcode />
                             </a>
                           </li>
+                      
             
               
             </ul>
