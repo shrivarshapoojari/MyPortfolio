@@ -1,32 +1,10 @@
-// import React from "react";
-// import GitHubCalendar from "react-github-calendar";
-// import { Row } from "react-bootstrap";
-
-// function Github() {
-//   return (
-//     <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-//       <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
-//         GitHub <strong className="purple">Contributions</strong>
-//       </h1>
-//       <GitHubCalendar
-//         username="shrivarshapoojari"
-//         blockSize={19}
-//         blockMargin={5}
-//         color="#39d353"
-//         fontSize={16}
-//       />
-//     </Row>
-//   );
-// }
-
-// export default Github;
-
+ 
 
 import { useEffect, useState, useRef } from "react";
 import CalendarHeatmap from "react-calendar-heatmap";
 import "react-calendar-heatmap/dist/styles.css";
 import moment from "moment";
-
+import githubFallbackData from "./githubFallbackData";
 const Github = () => {
   const [data, setData] = useState([]);
   const [totalContributions, setTotalContributions] = useState(0);
@@ -41,12 +19,18 @@ const Github = () => {
           date: item.date,
           count: item.count,
         }));
-
+       
         const total = Object.values(json.total).reduce((sum, count) => sum + count, 0);
         setTotalContributions(total);
         setData(formattedData);
       })
-      .catch((error) => console.error("Error fetching data:", error));
+      .catch((error) => {
+          
+        setData(githubFallbackData);
+        const total = githubFallbackData.reduce((sum, item) => sum + item.count, 0);
+        setTotalContributions(total);
+        console.error("Error fetching data:", error);
+      });
   }, []);
 
   const handleMouseOver = (event, value) => {
