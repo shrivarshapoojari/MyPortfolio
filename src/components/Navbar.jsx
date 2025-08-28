@@ -6,7 +6,7 @@ import logo from "../assets/logo.png"
 import Button from "react-bootstrap/Button";
 import { GrCertificate } from "react-icons/gr";
 import { Link } from "react-router-dom";
- 
+import { FaBlog } from "react-icons/fa";
 import { GrContact } from "react-icons/gr";
 import {
   AiFillStar,
@@ -117,29 +117,17 @@ function NavBar() {
 
 
 
-{
-    //Blogs to be added aftrer blog is done
-}
-            {/* <Nav.Item>
+ 
+            <Nav.Item>
               <Nav.Link
-                href=""
+                href="https://blog.shrivarshapoojary.in/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
+                <FaBlog style={{ marginBottom: "2px" }} /> 
               </Nav.Link>
-            </Nav.Item> */}
-
-            {/* <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/shrivarshapoojari/MyPortfolio"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
-              </Button>
-            </Nav.Item> */}
+            </Nav.Item>
+ 
           </Nav>
         </Navbar.Collapse>
       </Container>
