@@ -1,0 +1,192 @@
+name: Update Fallback Data
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Run daily at 2 AM UTC
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm install axios moment
+          
+      - name: Create update scripts
+        run: |
+          cat > update-github.js << 'EOF'
+          const axios = require('axios');
+          const fs = require('fs');
+          
+          async function updateGithubData() {
+            try {
+              const response = await axios.get('https://github-contributions-api.jogruber.de/v4/shrivarshapoojari');
+              
+              // Validate response structure
+              if (!response.data || !response.data.contributions || !Array.isArray(response.data.contributions)) {
+                throw new Error('Invalid response format: missing contributions array');
+              }
+              
+              if (response.data.contributions.length === 0) {
+                throw new Error('Empty contributions data received');
+              }
+              
+              // Validate that each contribution has required fields
+              const invalidEntries = response.data.contributions.filter(item => 
+                !item.date || typeof item.count !== 'number'
+              );
+              
+              if (invalidEntries.length > 0) {
+                throw new Error(`Found ${invalidEntries.length} invalid contribution entries`);
+              }
+              
+              const formattedData = response.data.contributions.map(item => ({
+                date: item.date,
+                count: item.count,
+              }));
+              
+              // Additional validation: check date format and count values
+              const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+              const invalidDates = formattedData.filter(item => !datePattern.test(item.date));
+              
+              if (invalidDates.length > 0) {
+                throw new Error(`Found ${invalidDates.length} entries with invalid date format`);
+              }
+              
+              const negativeCountsEntries = formattedData.filter(item => item.count < 0);
+              if (negativeCountsEntries.length > 0) {
+                throw new Error(`Found ${negativeCountsEntries.length} entries with negative counts`);
+              }
+              
+              console.log(`✅ GitHub data validation passed: ${formattedData.length} entries`);
+              
+              const fileContent = `// This file exports the fallback GitHub data for use in the Github.jsx component.
+          // Last updated: ${new Date().toISOString()}
+          const githubFallbackData = ${JSON.stringify(formattedData, null, 2)};
+          export default githubFallbackData;`;
+              
+              fs.writeFileSync('src/components/About/githubFallbackData.js', fileContent);
+              console.log('GitHub fallback data updated successfully');
+            } catch (error) {
+              console.error('Error updating GitHub data:', error.message);
+              process.exit(1);
+            }
+          }
+          
+          updateGithubData();
+          EOF
+          
+          cat > update-leetcode.js << 'EOF'
+          const axios = require('axios');
+          const moment = require('moment');
+          const fs = require('fs');
+          
+          async function updateLeetcodeData() {
+            try {
+              const response = await axios.get('https://alfa-leetcode-api.onrender.com/shrivarsha/calendar/');
+              
+              // Validate response structure
+              if (!response.data || !response.data.submissionCalendar) {
+                throw new Error('Invalid response format: missing submissionCalendar');
+              }
+              
+              let parsedData;
+              try {
+                parsedData = JSON.parse(response.data.submissionCalendar);
+              } catch (parseError) {
+                throw new Error('Failed to parse submissionCalendar JSON: ' + parseError.message);
+              }
+              
+              if (typeof parsedData !== 'object' || parsedData === null) {
+                throw new Error('Parsed submissionCalendar is not a valid object');
+              }
+              
+              const timestamps = Object.keys(parsedData);
+              if (timestamps.length === 0) {
+                throw new Error('Empty submission calendar data received');
+              }
+              
+              // Validate timestamps and counts
+              const invalidTimestamps = timestamps.filter(timestamp => {
+                const num = parseInt(timestamp);
+                return isNaN(num) || num < 0;
+              });
+              
+              if (invalidTimestamps.length > 0) {
+                throw new Error(`Found ${invalidTimestamps.length} invalid timestamps`);
+              }
+              
+              const invalidCounts = timestamps.filter(timestamp => {
+                const count = parsedData[timestamp];
+                return typeof count !== 'number' || count < 0;
+              });
+              
+              if (invalidCounts.length > 0) {
+                throw new Error(`Found ${invalidCounts.length} invalid count values`);
+              }
+              
+              const formattedData = timestamps.map(timestamp => ({
+                date: moment.unix(timestamp).format('YYYY-MM-DD'),
+                count: parsedData[timestamp],
+              }));
+              
+              // Validate formatted dates
+              const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+              const invalidDates = formattedData.filter(item => !datePattern.test(item.date));
+              
+              if (invalidDates.length > 0) {
+                throw new Error(`Found ${invalidDates.length} entries with invalid formatted dates`);
+              }
+              
+              console.log(`LeetCode data validation passed: ${formattedData.length} entries`);
+              
+              const fileContent = `// This file exports the fallback LeetCode data for use in the Leetcode.jsx component.
+          // Last updated: ${new Date().toISOString()}
+          const leetcodeFallbackData = ${JSON.stringify(formattedData, null, 2)};
+          export default leetcodeFallbackData;`;
+              
+              fs.writeFileSync('src/components/About/leetcodeFallbackData.js', fileContent);
+              console.log('LeetCode fallback data updated successfully');
+            } catch (error) {
+              console.error('Error updating LeetCode data:', error.message);
+              // Don't exit - let GitHub data update proceed
+            }
+          }
+          
+          updateLeetcodeData();
+          EOF
+          
+      - name: Update GitHub data
+        run: node update-github.js
+          
+      - name: Update LeetCode data
+        run: node update-leetcode.js
+          
+      - name: Check for changes
+        id: verify-changed-files
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Commit and push changes
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add src/components/About/*FallbackData.js
+          git commit -m "Auto-update fallback data - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
