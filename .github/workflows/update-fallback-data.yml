@@ -25,9 +25,9 @@ jobs:
           
       - name: Create update scripts
         run: |
-          cat > update-github.js << 'EOF'
-          const axios = require('axios');
-          const fs = require('fs');
+          cat > update-github.mjs << 'EOF'
+          import axios from 'axios';
+          import fs from 'fs';
           
           async function updateGithubData() {
             try {
@@ -87,10 +87,10 @@ jobs:
           updateGithubData();
           EOF
           
-          cat > update-leetcode.js << 'EOF'
-          const axios = require('axios');
-          const moment = require('moment');
-          const fs = require('fs');
+          cat > update-leetcode.mjs << 'EOF'
+          import axios from 'axios';
+          import moment from 'moment';
+          import fs from 'fs';
           
           async function updateLeetcodeData() {
             try {
@@ -168,10 +168,10 @@ jobs:
           EOF
           
       - name: Update GitHub data
-        run: node update-github.js
+        run: node update-github.mjs
           
       - name: Update LeetCode data
-        run: node update-leetcode.js
+        run: node update-leetcode.mjs
           
       - name: Check for changes
         id: verify-changed-files
