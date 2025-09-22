@@ -17,6 +17,7 @@ import nimmayatri from "../../assets/Projects/nimmayatri.png"
 import springflow from "../../assets/Projects/springflow.png"
 import springify from "../../assets/Projects/springify.png"
 import editron from "../../assets/Projects/editron.png"
+import  desktop from "../../assets/Projects/desktop.png"
 import { Helmet } from 'react-helmet-async'
 
 
@@ -65,6 +66,17 @@ function Projects() {
               description="Editron is a modern web-based IDE featuring AI-powered code intelligence through Groq integration and WebContainer API for browser-based Node.js execution. Provides VS Code-like editing experience with Monaco Editor, real-time syntax highlighting, and intelligent code completions. Supports multiple frameworks including React, Next.js, Vue, Angular, and Express with instant preview capabilities."
               ghLink="https://github.com/shrivarshapoojari/Editron"
               demoLink="https://editron.shrivarshapoojary.in/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={desktop}
+              isBlog={false}
+              git={true}
+              title="Desktop Agent"
+              description="Desktop Agent is an AI-powered cross-platform desktop assistant built with Electron and Node.js to streamline workflows through natural language commands. It features intelligent modules for reminders, news aggregation, weather updates, and system monitoring with SQLite-based persistence. The platform integrates Groq models for command parsing and routing, enabling smart task execution and automation. With quick actions and context-aware information services, it enhances productivity through personalized and efficient desktop management."
+              ghLink="https://github.com/shrivarshapoojari/Desktop-Agent"
+               
             />
           </Col>
           <Col md={4} className="project-card">
