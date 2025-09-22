@@ -16,6 +16,7 @@ import mld from "../../assets/Projects/mld.png"
 import nimmayatri from "../../assets/Projects/nimmayatri.png"
 import springflow from "../../assets/Projects/springflow.png"
 import springify from "../../assets/Projects/springify.png"
+import editron from "../../assets/Projects/editron.png"
 import { Helmet } from 'react-helmet-async'
 
 
@@ -56,6 +57,17 @@ function Projects() {
 
 
         <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={editron}
+              isBlog={false}
+              git={true}
+              title="Editron"
+              description="Editron is a modern web-based IDE featuring AI-powered code intelligence through Groq integration and WebContainer API for browser-based Node.js execution. Provides VS Code-like editing experience with Monaco Editor, real-time syntax highlighting, and intelligent code completions. Supports multiple frameworks including React, Next.js, Vue, Angular, and Express with instant preview capabilities."
+              ghLink="https://github.com/shrivarshapoojari/Editron"
+              demoLink="https://editron.shrivarshapoojary.in/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
             <ProjectCard
               imgPath={mernera}
               isBlog={false}
