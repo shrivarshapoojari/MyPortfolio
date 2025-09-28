@@ -18,6 +18,7 @@ import springflow from "../../assets/Projects/springflow.png"
 import springify from "../../assets/Projects/springify.png"
 import editron from "../../assets/Projects/editron.png"
 import  desktop from "../../assets/Projects/desktop.png"
+import  smart from "../../assets/Projects/smart.png"
 import { Helmet } from 'react-helmet-async'
 
 
@@ -68,6 +69,21 @@ function Projects() {
               demoLink="https://editron.shrivarshapoojary.in/"
             />
           </Col>
+
+  <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={smart}
+              isBlog={false}
+              git={true}
+              title="SmartReview"
+              description="SmartReview is an AI-driven GitHub App designed to streamline the software development lifecycle by automating pull request reviews. It integrates seamlessly with repositories via webhooks, analyzing code changes in real time to detect potential security vulnerabilities, bugs, performance bottlenecks, and maintainability issues. Leveraging the power of LangGraph, LangChain, and Groq, SmartReview builds structured reasoning pipelines that go beyond surface-level linting, delivering contextual and actionable feedback directly as PR comments."
+              ghLink="https://github.com/shrivarshapoojari/Desktop-Agent"
+              demoLink="https://smartreview.shrivarshapoojary.in/"
+               
+            />
+          </Col>
+
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={desktop}
@@ -79,6 +95,7 @@ function Projects() {
                
             />
           </Col>
+        
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={mernera}
