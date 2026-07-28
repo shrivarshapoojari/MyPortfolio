@@ -1,22 +1,6 @@
 // This file exports the fallback LeetCode data for use in the Leetcode.jsx component.
-// Last updated: 2026-07-24T03:03:18.354Z
+// Last updated: 2026-07-28T03:03:11.313Z
 const leetcodeFallbackData = [
-  {
-    "date": "2025-07-24",
-    "count": 5
-  },
-  {
-    "date": "2025-07-25",
-    "count": 1
-  },
-  {
-    "date": "2025-07-26",
-    "count": 3
-  },
-  {
-    "date": "2025-07-27",
-    "count": 1
-  },
   {
     "date": "2025-07-28",
     "count": 1
